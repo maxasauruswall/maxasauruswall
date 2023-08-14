@@ -1,1 +1,1 @@
-Sitemap: https://github.com/maxasauruswall/maxasauruswall.github.io/sitemap.xml
+Sitemap: https://maxasauruswall.github.io/maxasauruswall/sitemap.xml
