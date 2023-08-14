@@ -1,5 +1,5 @@
 ---
-title: "maxasauruswall"
+title: "Max Wall"
 ---
 
 This is a Quarto website.
