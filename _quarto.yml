@@ -11,6 +11,8 @@ website:
         text: Home
       - now.qmd
       - blog.qmd
+      - notes.qmd
+      - cartoons.qmd
 
 format:
   html:

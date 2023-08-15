@@ -39,6 +39,20 @@
     "href": "now.html",
     "title": "Now",
     "section": "",
-    "text": "Currently on academic leave until May 2024. Self-guided study in systems biology, math, type theory, and whatever else I get curious about."
+    "text": "Reading: Lamagna’s Computer Algebra\nCurrently on academic leave until May 2024. Self-guided study in systems biology, math, type theory, and whatever else I get curious about."
+  },
+  {
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": "Notes",
+    "section": "",
+    "text": "These are notes I’m taking on various topics. They are more properly defined in the negative, as “not blog posts”.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nComputer Algebra Concepts and Techniques\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "notes/lamagna_CAS.html",
+    "href": "notes/lamagna_CAS.html",
+    "title": "Computer Algebra Concepts and Techniques",
+    "section": "",
+    "text": "Computer Algebra Concepts and Techniques\nInspired by Chris Rackauckas’ call to action at the 2023 JuliaCon (and the use of Symbolics.jl logic in Catalyst, ModelingToolkit etc), I started reading this book August 15th.\nThings I’m curious about:\n\nWhat is a Groebner base, and why is it important?\n\nCurrently on: Chapter 2"
   }
 ]
