@@ -2,4 +2,4 @@
 title: "About"
 ---
 
-About this site
+I am a software engineer. 
