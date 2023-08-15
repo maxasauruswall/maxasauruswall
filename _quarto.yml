@@ -3,13 +3,14 @@ project:
   output-dir: docs
 
 website:
-  title: "maxasauruswall"
+  title: "Max Wall"
   navbar:
     background: light
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - now.qmd
+      - blog.qmd
 
 format:
   html:
