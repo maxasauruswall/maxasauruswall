@@ -10,5 +10,12 @@
     "items": [
       "/notes/lamagna_CAS.html"
     ]
+  },
+  {
+    "listing": "/cartoons.html",
+    "items": [
+      "/cartoons/local_joint.html",
+      "/cartoons/bugs_inconceivable.html"
+    ]
   }
 ]

@@ -1,5 +1,12 @@
 ---
 title: "Cartoons"
+listing: 
+    contents: cartoons
+    sort: "date desc"
+    type: default
+    filter-ui: true
+    sort-ui: true
+page-layout: full
 ---
 
-<img src="https://s3.amazonaws.com/maxawall.com/cartoons/inconcievable_bugs.jpeg">
+
