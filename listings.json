@@ -4,5 +4,11 @@
     "items": [
       "/posts/logarithms.html"
     ]
+  },
+  {
+    "listing": "/notes.html",
+    "items": [
+      "/notes/lamagna_CAS.html"
+    ]
   }
 ]
