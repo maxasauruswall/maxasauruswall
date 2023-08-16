@@ -25,14 +25,35 @@
     "href": "notes.html",
     "title": "Notes",
     "section": "",
-    "text": "These are notes I’m taking on various topics. They are more properly defined in the negative, as “not blog posts”.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nComputer Algebra Concepts and Techniques\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "These are notes I’m taking on various topics. They are more properly defined in the negative, as “not blog posts”.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nComputer Algebra Concepts and Techniques\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "notes/lamagna_CAS.html",
-    "href": "notes/lamagna_CAS.html",
+    "objectID": "notes/CAS/lamagna_CAS.html",
+    "href": "notes/CAS/lamagna_CAS.html",
     "title": "Computer Algebra Concepts and Techniques",
     "section": "",
-    "text": "Computer Algebra Concepts and Techniques\nInspired by Chris Rackauckas’ call to action at the 2023 JuliaCon (and the use of Symbolics.jl logic in Catalyst, ModelingToolkit etc), I started reading this book August 15th.\nThings I’m curious about:\n\nWhat is a Groebner base, and why is it important?\n\nCurrently on: Chapter 2"
+    "text": "Computer Algebra Concepts and Techniques\nInspired by Chris Rackauckas’ call to action at the 2023 JuliaCon (and the use of Symbolics.jl logic in Catalyst, ModelingToolkit etc), I started reading this book August 15th.\nThings I’m curious about:\nCurrently on: Chapter 3"
+  },
+  {
+    "objectID": "notes/CAS/lamagna_CAS.html#chapter-3",
+    "href": "notes/CAS/lamagna_CAS.html#chapter-3",
+    "title": "Computer Algebra Concepts and Techniques",
+    "section": "Chapter 3",
+    "text": "Chapter 3\nI started coding along a toy implementation in julia. First up, a handrolled arbitrary precision integer type:\n\n\nstruct MyBigInt\n    sign::Symbol\n    base::Int\n    digits::Vector{Int64}\nend\n\np1 = MyBigInt(:+, 1000, Vector([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 0]))\n\n\nMyBigInt(:+, 1000, [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 0])\nFigure 1: ?(caption)\n\n\n\nSource: lamagna_CAS_ch_3.ipynb"
+  },
+  {
+    "objectID": "notes/CAS/lamagna_CAS.html#chapter-4",
+    "href": "notes/CAS/lamagna_CAS.html#chapter-4",
+    "title": "Computer Algebra Concepts and Techniques",
+    "section": "Chapter 4",
+    "text": "Chapter 4"
+  },
+  {
+    "objectID": "notes/CAS/lamagna_CAS_ch_3.html",
+    "href": "notes/CAS/lamagna_CAS_ch_3.html",
+    "title": "Max Wall",
+    "section": "",
+    "text": "struct MyBigInt\n    sign::Symbol\n    base::Int\n    digits::Vector{Int64}\nend\n\np1 = MyBigInt(:+, 1000, Vector([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 0]))\n\n\nMyBigInt(:+, 1000, [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 0])\nFigure 1: ?(caption)\n\n\n\n\n# example value in Julia's Base.BigInt\nn::BigInt = 1234567890 \n\n# some functions to test my implementation\nfunction to_base_big(n::MyBigInt)\n    ret::BigInt = 0\n    for i in 1:length(n.digits)\n        ret += BigInt(n.digits[i]) * n.base ^ (i - 1) \n    end\n    return ret\nend\n\nfunction from_base_big(n::BigInt; base::Int64 = 1000)\n    ret::MyBigInt = MyBigInt(:+, base, [])\n    while n &gt; 0\n        push!(ret.digits, mod(n, ret.base))\n        n = div(n, ret.base)\n    end\n    return ret\nend\n\n# round trip test\nto_base_big(from_base_big(n))\n\n\n1234567890\nFigure 2: ?(caption)\n\n\n\n\n\n\n1234567890\n\n\n\ndiv(n, 1000)\n\n1234567\n\n\n\n\n\n1234567890\n\n\n\nfrom_base_big(n)\n\nMyBigInt(:+, 1000, [890, 567, 234, 1])\n\n\n\nret::BigInt = 0\nfor i in 1:length(n.digits)\n    ret += BigInt(n.digits[end - i]) * n.base * (i - 1) \nend\n\nErrorException: type BigInt has no field digits\n\n\n\nfor i in 10:-1:1\n    println(i)\nend\n\n10\n9\n8\n7\n6\n5\n4\n3\n2\n1"
   },
   {
     "objectID": "now.html",
