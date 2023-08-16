@@ -11,4 +11,14 @@ Things I'm curious about:
 
 - What is a Groebner base, and why is it important? 
 
-Currently on: Chapter 2
+Currently on: Chapter 3
+
+## Chapter 3
+
+I started coding along a toy implementation in julia. First up, a handrolled arbitrary precision integer type:
+
+{{< embed lamagna_CAS_ch_3.ipynb#fig-1 echo=true >}}
+
+## Chapter 4
+
+
